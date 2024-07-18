@@ -4,12 +4,12 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'db',
   connector: 'postgresql',
-  url: 'postgresql://mikiyasgirma:tdc_erp_db_pass@localhost:5432/str_db',
-  host: 'localhost',
+  url: 'postgresql://postgres:TLpqiIdpTISHjLTmZTAlMfNlXBNZYiMh@monorail.proxy.rlwy.net:46566/railway',
+  host: 'postgres.railway.internal',
   port: 5432,
-  user: 'mikiyasgirma',
+  user: 'postgres',
   password: 'tdc_erp_db_pass',
-  database: 'str_db'
+  database: 'TLpqiIdpTISHjLTmZTAlMfNlXBNZYiMh',
 };
 
 // Observe application's life cycle to disconnect the datasource when
@@ -17,8 +17,10 @@ const config = {
 // gracefully. The `stop()` method is inherited from `juggler.DataSource`.
 // Learn more at https://loopback.io/doc/en/lb4/Life-cycle.html
 @lifeCycleObserver('datasource')
-export class DbDataSource extends juggler.DataSource
-  implements LifeCycleObserver {
+export class DbDataSource
+  extends juggler.DataSource
+  implements LifeCycleObserver
+{
   static dataSourceName = 'db';
   static readonly defaultConfig = config;
 
