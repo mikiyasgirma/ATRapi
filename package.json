@@ -28,7 +28,7 @@
     "docker:build": "docker build -t str .",
     "docker:run": "docker run -p 3000:3000 -d str",
     "premigrate": "yarn run build",
-    "migrate": "node ./dist/migrate",
+    "migrate": "node lb4 migrate",
     "preopenapi-spec": "yarn run build",
     "openapi-spec": "node ./dist/openapi-spec",
     "prestart": "yarn run rebuild",

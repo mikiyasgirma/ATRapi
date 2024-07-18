@@ -1,0 +1,7 @@
+{
+  "build": {
+    "scripts": {
+      "postdeploy": "npm run migrate"
+    }
+  }
+}
