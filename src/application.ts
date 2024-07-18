@@ -13,6 +13,7 @@ import {
 } from '@loopback/rest-explorer';
 import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
+import {MigrateController} from './controllers/migrate.controller';
 import {DbDataSource} from './datasources';
 import {MySequence} from './sequence';
 
@@ -56,5 +57,8 @@ export class StrApplication extends BootMixin(
         nested: true,
       },
     };
+
+    // Add the MigrateController
+    this.controller(MigrateController);
   }
 }
