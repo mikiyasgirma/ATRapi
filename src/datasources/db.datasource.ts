@@ -8,8 +8,8 @@ const config = {
   host: 'postgres.railway.internal',
   port: 5432,
   user: 'postgres',
-  password: 'railway',
-  database: 'TLpqiIdpTISHjLTmZTAlMfNlXBNZYiMh',
+  password: 'TLpqiIdpTISHjLTmZTAlMfNlXBNZYiMh',
+  database: 'railway',
 };
 
 // Observe application's life cycle to disconnect the datasource when
