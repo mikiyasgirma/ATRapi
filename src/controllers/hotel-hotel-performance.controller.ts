@@ -41,7 +41,7 @@ export class HotelHotelPerformanceController {
     },
   })
   async find(
-    @param.path.number('id') id: string,
+    @param.path.number('id') id: number,
     @param.query.object('filter') filter?: Filter<HotelPerformance>,
   ): Promise<ComputedHotelPerformance[]> {
     // Fetch hotel performances
@@ -106,7 +106,7 @@ export class HotelHotelPerformanceController {
     },
   })
   async patch(
-    @param.path.number('id') id: string,
+    @param.path.number('id') id: number,
     @requestBody({
       content: {
         'application/json': {
@@ -132,7 +132,7 @@ export class HotelHotelPerformanceController {
     },
   })
   async delete(
-    @param.path.number('id') id: string,
+    @param.path.number('id') id: number,
     @param.query.object('where', getWhereSchemaFor(HotelPerformance))
     where?: Where<HotelPerformance>,
   ): Promise<Count> {
@@ -152,7 +152,7 @@ export class HotelHotelPerformanceController {
     },
   })
   async getHotelAdr(
-    @param.path.number('hotel_id') hotelId: string,
+    @param.path.number('hotel_id') hotelId: number,
   ): Promise<number> {
     const performances = await this.hotelRepository
       .hotelPerformances(hotelId)
@@ -181,7 +181,7 @@ export class HotelHotelPerformanceController {
     },
   })
   async getHotelRevPar(
-    @param.path.number('hotel_id') hotelId: string,
+    @param.path.number('hotel_id') hotelId: number,
   ): Promise<number> {
     const performances = await this.hotelRepository
       .hotelPerformances(hotelId)
@@ -210,7 +210,7 @@ export class HotelHotelPerformanceController {
     },
   })
   async getHotelOccupancyRate(
-    @param.path.number('hotel_id') hotelId: string,
+    @param.path.number('hotel_id') hotelId: number,
   ): Promise<number> {
     const performances = await this.hotelRepository
       .hotelPerformances(hotelId)

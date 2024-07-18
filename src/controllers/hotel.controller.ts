@@ -103,7 +103,7 @@ export class HotelController {
     },
   })
   async findById(
-    @param.path.number('id') id: string,
+    @param.path.number('id') id: number,
     @param.filter(Hotel, {exclude: 'where'})
     filter?: FilterExcludingWhere<Hotel>,
   ): Promise<Hotel> {
@@ -115,7 +115,7 @@ export class HotelController {
     description: 'Hotel PATCH success',
   })
   async updateById(
-    @param.path.number('id') id: string,
+    @param.path.number('id') id: number,
     @requestBody({
       content: {
         'application/json': {
@@ -133,7 +133,7 @@ export class HotelController {
     description: 'Hotel PUT success',
   })
   async replaceById(
-    @param.path.number('id') id: string,
+    @param.path.number('id') id: number,
     @requestBody() hotel: Hotel,
   ): Promise<void> {
     await this.hotelRepository.replaceById(id, hotel);
@@ -143,7 +143,7 @@ export class HotelController {
   @response(204, {
     description: 'Hotel DELETE success',
   })
-  async deleteById(@param.path.number('id') id: string): Promise<void> {
+  async deleteById(@param.path.number('id') id: number): Promise<void> {
     await this.hotelRepository.deleteById(id);
   }
 

@@ -11,11 +11,11 @@ import {HotelPerformance} from './hotel-performance.model';
 @model()
 export class Hotel extends Entity {
   @property({
-    type: 'string',
+    type: 'number',
     id: true,
     generated: true,
   })
-  id?: string;
+  id?: number;
 
   @property({
     type: 'string',

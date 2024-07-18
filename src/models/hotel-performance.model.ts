@@ -16,11 +16,11 @@ export class HotelPerformance extends Entity {
   updatedAt: Date;
 
   @property({
-    type: 'string',
+    type: 'number',
     id: true,
     generated: true,
   })
-  id?: string;
+  id?: number;
 
   @property({
     type: 'number',
