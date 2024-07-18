@@ -8,7 +8,7 @@ const config = {
   host: 'postgres.railway.internal',
   port: 5432,
   user: 'postgres',
-  password: 'tdc_erp_db_pass',
+  password: 'railway',
   database: 'TLpqiIdpTISHjLTmZTAlMfNlXBNZYiMh',
 };
 
