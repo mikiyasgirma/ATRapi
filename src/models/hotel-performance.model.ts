@@ -42,7 +42,7 @@ export class HotelPerformance extends Entity {
   revenue: number;
 
   @belongsTo(() => Hotel)
-  hotelId: string;
+  hotelId: number;
 
   constructor(data?: Partial<HotelPerformance>) {
     super(data);

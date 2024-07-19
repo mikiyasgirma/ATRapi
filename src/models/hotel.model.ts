@@ -14,7 +14,6 @@ export class Hotel extends Entity {
     type: 'number',
     id: true,
     generated: true,
-    required: false,
   })
   id?: number;
 
@@ -37,7 +36,7 @@ export class Hotel extends Entity {
   rooms: number;
 
   @belongsTo(() => User)
-  userId: string;
+  userId: number;
 
   @hasMany(() => HotelPerformance)
   hotelPerformances: HotelPerformance[];
