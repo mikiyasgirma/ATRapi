@@ -36,7 +36,7 @@ export class Hotel extends Entity {
   rooms: number;
 
   @belongsTo(() => User)
-  userId: number;
+  userId: string;
 
   @hasMany(() => HotelPerformance)
   hotelPerformances: HotelPerformance[];

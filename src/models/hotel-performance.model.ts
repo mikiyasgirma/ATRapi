@@ -19,7 +19,7 @@ export class HotelPerformance extends Entity {
     type: 'number',
     id: true,
     generated: true,
-    required: false,
+    // required: false,
   })
   id?: number;
 
